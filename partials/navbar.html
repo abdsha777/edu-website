@@ -1,0 +1,46 @@
+
+    <nav class="navbar">
+        <h2 class="heading">Edu Website</h2>
+        <div class="options">
+            <i class='bx bx-menu options-items' id="menubtn"></i>
+            <div class="options-items">
+                <a href="index.html" class="links">
+                    <i class='bx bxs-home options-items' color="#ffffff"></i>
+                    Home
+                </a>
+            </div>
+            <div class="options-items not-selectable" id="category-box">
+                Category
+                <i class='bx bxs-down-arrow downarr'></i>
+            </div>
+            
+        </div>
+
+    </nav>
+    <div class="category visible" id="category">
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JS</li>
+        </ul>
+    </div>
+    <script>
+        const btn=document.getElementById('category-box');
+        const category=document.getElementById('category');
+    if(btn){
+            btn.addEventListener('click',()=>{
+            category.classList.toggle('visible');
+        })
+    }
+    else{
+        console.log("notfound");
+    }
+    
+    </script>
+    <script>
+        const menubtn=document.getElementById('menubtn');
+    const sidebar=document.getElementById('sidebar');
+    menubtn.addEventListener('click',()=>{
+        sidebar.classList.toggle('visible');
+    })
+    </script>
